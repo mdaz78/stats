@@ -1,3 +1,4 @@
+import { CsvFileReader } from "./CsvFileReader";
 import { MatchData } from "./MatchData";
 import { MatchResult } from "./MatchResult";
 import { dateStringToDate } from "./utils";
@@ -25,5 +26,9 @@ export class MatchReader {
         row[6],
       ];
     });
+  }
+
+  static fromCSV(filepath: string): MatchReader {
+    return new MatchReader(new CsvFileReader(filepath));
   }
 }
