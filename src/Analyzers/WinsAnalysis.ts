@@ -3,7 +3,7 @@ import { MatchResult } from "../MatchResult";
 import { Analyzer } from "../Summary";
 
 export class WinsAnalysis implements Analyzer {
-  constructor(public teamName: string) {}
+  constructor(public teamName: string) { }
 
   run(matches: MatchData[]): string {
     let wins = 0;

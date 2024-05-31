@@ -12,7 +12,7 @@ export interface OutputTarget {
 }
 
 export class Summary {
-  constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {}
+  constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) { }
 
   buildAndPrintReport(matchData: MatchData[]) {
     const report = this.analyzer.run(matchData);
